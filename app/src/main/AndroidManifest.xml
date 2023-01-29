@@ -12,33 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MadrasaApp"
         tools:targetApi="31">
-        <activity
-            android:name=".UpdateActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+        <activity android:name=".UpdateActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".AddActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            android:label="Add Book"
+            android:parentActivityName=".MainActivity">
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="MadrasaApp">
+            android:label="MadrasaApp"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
     </application>
 
